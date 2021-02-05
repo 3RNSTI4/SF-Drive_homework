@@ -1,0 +1,291 @@
+@font-face {
+    src: url('../fonts/Roboto-Light.ttf');
+    font-family: "Roboto";
+}
+
+@font-face {
+    src: url('../fonts/Roboto-Medium.ttf');
+    font-family: "Roboto500";
+}
+
+button:focus {
+    outline: none;
+}
+
+html {
+    margin: 0px;
+}
+
+body {
+    margin: 0px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    align-items: center;
+}
+
+.header nav {
+    display: inline;
+}
+
+.header-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.header-right-nav a {
+    font-family: 'Roboto';
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 19px;
+    color: #1B1B1B;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 30px;
+    margin-right: 0px;
+}
+
+.header button {
+    display: inline;
+    margin-left: 45px;
+}
+
+.header-right-btn {
+    margin-left: 40px;
+    border: solid grey 1px;
+    border-radius: 6px;
+    background-color: white;
+    font-family: 'Roboto500';
+    font-size: 16px;
+    line-height: 19px;
+    color: #1B1B1B;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-right: 40px;
+}
+
+.header-logo {
+    margin-left: 40px;
+}
+
+.main {
+    padding: 0px 20px;
+    padding-left: 237px;
+    padding-right: 237px;
+    margin-top: 111px;
+}
+
+.main-img {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+    margin-left: 54px;
+    margin-right: 54px;
+}
+
+.main-img img {
+    height: 300px;
+    width: 397px;
+}
+
+h1 {
+    font-family: 'Roboto500';
+    margin: 0px;
+    font-size: 64px;
+    line-height: 120%;
+    text-align: center;
+    color: #1B1B1B;
+}
+
+p {
+    font-family: 'Roboto';
+    margin: 10px;
+    font-size: 24px;
+    line-height: 147.3%;
+    text-align: center;
+    color: #1B1B1B;
+}
+
+.main-aboutUs p {
+    margin: 0px 20px;
+    font-size: 24px;
+}
+
+h2 {
+    font-family: 'Roboto500';
+    font-size: 48px;
+    line-height: 120%;
+    text-align: center;
+    color: #1B1B1B;
+}
+
+.main-contacts {
+    margin-top: 80px;
+    background-color: #F7F9FB;
+    padding-top: 80px;
+    padding-bottom: 100px;
+    width: 100vw;
+    margin-left: -256px;
+}
+
+.main-contacts h2 {
+    margin: 0px;
+}
+
+.main-contacts-content {
+    display: flex;
+    justify-content: center;
+}
+
+.main-contacts-content-email {
+    margin-top: 43px;
+    padding-right: 69px;
+    border-right: solid #C8C8CF 1px;
+}
+
+.main-contacts-content-phone {
+    margin-top: 43px;
+    padding-left: 69px;
+}
+
+.main-contacts-content-email-text {
+    font-size: 14px;
+    line-height: 147.3%;
+    text-align: center;
+    color: #4F4F4F;
+    margin-bottom: 6px;
+}
+
+.main-contacts-content-email-email {
+    font-size: 20px;
+    line-height: 147.3%;
+    text-align: center;
+    color: #000000;
+    margin-top: 0px;
+}
+
+.main-contacts-content-phone-text {
+    font-size: 14px;
+    line-height: 147.3%;
+    text-align: center;
+    color: #4F4F4F;
+    margin-bottom: 6px;
+}
+
+.main-contacts-content-phone-phone {
+    font-size: 20px;
+    line-height: 147.3%;
+    text-align: center;
+    color: #000000;
+    margin-top: 0px;
+}
+
+.main-team {
+    margin-top: 80px;
+}
+
+.main-team h2 {
+    margin: 0px;
+}
+
+.main-team-names {
+    display: grid;
+    grid-template-columns: repeat(2, 160px);
+    text-align: center;
+    justify-content: center;
+}
+
+.main-team-names {
+    display: none;
+}
+
+.desc {
+    display: inline;
+}
+
+.first {
+    display: flex;
+    justify-content: center;
+}
+
+.first div {
+    margin-left: 80px;
+}
+
+.first div:nth-child(1) {
+    margin-left: 0px;
+}
+
+.second {
+    display: flex;
+    justify-content: center;
+}
+
+.second div:nth-child(2) {
+    margin-left: 80px;
+}
+
+.main-team-names div {
+    margin-top: 60px;
+}
+
+.main-team-names img {
+    height: 180px;
+    width: 180px;
+}
+
+.team-name {
+    font-family: 'Roboto500';
+    font-size: 20px;
+    line-height: 147.3%;
+    text-align: center;
+    color: #000000;
+    margin-bottom: 8px;
+}
+
+.team-profession {
+    font-size: 14px;
+    line-height: 147.3%;
+    text-align: center;
+    color: #828282;
+    margin-top: 0px;
+}
+
+.footer {
+    margin-top: 120px;
+    height: 125px;
+    background: #3F3D56;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footer span {
+    margin: 0px;
+    margin-top: 53px;
+    margin-left: 40px;
+    margin-bottom: 52px;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+    opacity: 0.4;
+    font-family: 'Roboto';
+}
+
+.footer-socials {
+    margin: 0px;
+    margin-right: 46px;
+    margin-top: 46px;
+    margin-bottom: 46px;
+}
+
+.footer-socials a {
+    margin: 0px;
+    margin-left: 16px;
+    margin-right: 19px;
+    text-decoration: none;
+}
