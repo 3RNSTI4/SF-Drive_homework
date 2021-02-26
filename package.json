@@ -1,0 +1,32 @@
+{
+    "name": "sf-project",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/3RNSTI4/SF-Drive_homework.git"
+    },
+    "author": "3RNST",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/3RNSTI4/SF-Drive_homework/issues"
+    },
+    "homepage": "https://github.com/3RNSTI4/SF-Drive_homework#readme",
+    "devDependencies": {
+        "node-sass": "^5.0.0"
+    }
+}
+
+{
+    "watches": {
+        "sass": "sass/**"
+    },
+    "scripts": {
+        "sass": "node-sass sass/ -o build/css/",
+        "dev": "rerun-script"
+    }
+}
