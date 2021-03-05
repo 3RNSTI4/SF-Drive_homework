@@ -3,9 +3,6 @@
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/3RNSTI4/SF-Drive_homework.git"
@@ -17,16 +14,24 @@
     },
     "homepage": "https://github.com/3RNSTI4/SF-Drive_homework#readme",
     "devDependencies": {
-        "node-sass": "^5.0.0"
-    }
-}
-
-{
+        "clean-webpack-plugin": "^3.0.0",
+        "copy-webpack-plugin": "^8.0.0",
+        "css-loader": "^5.1.1",
+        "html-webpack-plugin": "^5.2.0",
+        "mini-css-extract-plugin": "^1.3.9",
+        "node-sass": "^5.0.0",
+        "pug": "^3.0.2",
+        "pug-loader": "^1.0.2",
+        "style-loader": "^2.0.0",
+        "webpack": "^5.24.3",
+        "webpack-cli": "^4.5.0"
+    },
     "watches": {
         "sass": "sass/**"
     },
     "scripts": {
         "sass": "node-sass sass/ -o build/css/",
-        "dev": "rerun-script"
+        "dev": "rerun-script",
+        "build": "webpack --watch"
     }
 }

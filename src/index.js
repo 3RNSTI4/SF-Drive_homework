@@ -1,0 +1,1 @@
+import { script } from '/scripts/FAQ.js';
