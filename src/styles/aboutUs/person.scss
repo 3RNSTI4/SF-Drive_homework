@@ -1,39 +1,48 @@
-@import "./../fonts.scss";
-.person {
+@import "./../_Common/_variables.scss";
+
+.person{
     display: grid;
     margin-bottom: 30px;
-    .pfp {
+
+    .pfp{
         width: 80px;
         height: 80px;
         justify-self: center;
         margin-bottom: 15px;
     }
-    .name {
+
+    .name{
         font-family: Roboto;
         font-size: 16px;
         line-height: 24px;
         text-align: center;
         margin-bottom: 8px;
     }
-    .profession {
+
+    .profession{
         font-family: Roboto;
         font-size: 12px;
         line-height: 18px;
         text-align: center;
         color: #828282;
     }
-    @media screen and (min-width: 600px) {
+
+    @media screen and (min-width: 600px){
         margin-bottom: 60px;
-        .pfp {
+
+        .pfp{
             width: 180px;
             height: 180px;
             margin-bottom: 23px;
         }
-        .name {
+
+        .name{
             font-size: 20px;
         }
-        .profession {
+
+        .profession{
             font-size: 14px;
         }
     }
 }
+

@@ -1,31 +1,24 @@
 import React from "react";
 
-import Header from "./../header.js";
-import Description from "./description.js";
-import Contacts from "./contacts.js";
-import Team from "./team.js";
-import Footer from "./../footer.js";
+import Header from "./../Common/Header.js";
+import Description from "./Description.js";
+import Contacts from "./Contacts.js";
+import Team from "./Team.js";
+import Footer from "./../Common/Footer.js";
 
 
-function AboutUs() {
-
-    return ( <
-        >
-        <
-        Header / >
-        <
-        main >
-        <
-        Description / >
-        <
-        Contacts / >
-        <
-        Team / >
-        <
-        /main> <
-        Footer / >
-        <
-        />
+function AboutUs(){
+    
+    return(
+        <>
+            <Header/>
+            <main>
+                <Description/>
+                <Contacts/>
+                <Team/>
+            </main>
+            <Footer/>
+        </>
     );
 }
 

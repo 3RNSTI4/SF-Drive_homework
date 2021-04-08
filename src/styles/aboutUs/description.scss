@@ -1,17 +1,18 @@
-@import "./../fonts.scss";
-.mainPicWrap {
+@import "./../_Common/_variables.scss";
+
+.mainPicWrap{
     display: flex;
     justify-content: center;
 }
 
-.mainPic {
+.mainPic{
     margin-top: 60px;
     height: 202px;
     width: 267px;
     margin-bottom: 40px;
 }
 
-.aboutUsHeader {
+.aboutUsHeader{
     font-family: 'Roboto500';
     margin: 0px;
     font-size: 32px;
@@ -21,7 +22,7 @@
     margin-top: 0px;
 }
 
-.aboutUsText {
+.aboutUsText{
     margin-top: 10px;
     margin-bottom: 40px;
     margin-left: 20px;
@@ -33,17 +34,20 @@
     color: $main-text-color;
 }
 
-@media screen and (min-width: 600px) {
-    .mainPic {
+@media screen and (min-width: 600px){
+
+    .mainPic{
         margin-top: 110px;
         height: 300px;
         width: 397px;
         margin-bottom: 60px;
     }
-    .aboutUsHeader {
+    
+    .aboutUsHeader{
         font-size: 64px;
     }
-    .aboutUsText {
+
+    .aboutUsText{
         margin-top: 30px;
         margin-bottom: 160px;
         margin-left: 257px;
