@@ -1,24 +1,15 @@
 import React, { useState } from "react";
+import { useSelector } from 'react-redux';
 
 import "./../../styles/_Common/header.scss";
 
-// const ABOUTUS_LINK = "http://192.168.1.37:4200/AboutUs";
-// const FAQ_LINK = "http://192.168.1.37:4200/FAQ";
+const CHOOSE_PATH = "http://localhost:4200/Choose";
+const ADD_PATH = "http://localhost:4200/addcar";
 
-const ABOUTUS_LINK = "http://localhost:4200/AboutUs";
-const FAQ_LINK = "http://localhost:4200/FAQ";
-
-function Header() {
+function HeaderREGISTERED() {
 
     const [mobileSwitch, setSwitch] = useState(false); 
-
-    function changePage(page){
-        let pages = document.getElementsByClassName("page");
-        for(let i = 0; i < pages.length; i++){
-            if(pages[i].id != page) pages[i].classList.add("hide");
-            else pages[i].classList.remove("hide");
-        }
-    }
+    
     function showMobile() {
         if(mobileSwitch){
             document.getElementById("mobileMenu").classList.add("hide");
@@ -31,10 +22,6 @@ function Header() {
         }
     }
 
-    function showAuth(){
-        document.getElementById("logIn").classList.remove("hide");
-    }
-
     return (
         <>
             <header>
@@ -43,11 +30,11 @@ function Header() {
                 </button>
                 <div className="PcMenu">
                     <nav>
-                        <a href={ ABOUTUS_LINK }>О нас</a>
-                        <a>Условия</a>
-                        <a href={ FAQ_LINK }>Частые вопросы</a>
+                        <a href={ CHOOSE_PATH }>Бронирования</a>
+                        <a href={ ADD_PATH }>Мои автомобили</a>
+                        <a>Сообщения</a>
                     </nav>
-                    <button className="enter" onClick= { showAuth }>Войти</button>
+                    <div class="avatar">{ useSelector(state => state.authorization.user.email) }</div>
                 </div>
                 <button className="burger">
                         <img id="burger" onClick={ showMobile } src="./assets/burger.svg" alt="menu"></img>
@@ -57,4 +44,4 @@ function Header() {
     );
 }
 
-export default Header;
+export default HeaderREGISTERED;

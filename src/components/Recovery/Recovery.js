@@ -11,7 +11,7 @@ function Recovery(props) {
     const handleClick = () => {
         document.getElementsByClassName("recWarning")[0].innerHTML = "";
         if(pwd === REpwd && pwd.length > 6) {
-            props.recoverySendRequest({email: email, password: pwd});
+            props.recovery_send({email: email, password: pwd});
         } else if(pwd.length < 7) {
             document.getElementsByClassName("recWarning")[0].innerHTML = "Слишком короткий пароль";
         } else {
@@ -19,18 +19,28 @@ function Recovery(props) {
         }
     };
 
+    function back(){
+        document.getElementById("logIn").classList.remove("hide");
+        document.getElementById("rec").classList.add("hide");
+    }
+
+    function hide(){
+        document.getElementById("rec").classList.add("hide");
+    }
+
     return (
         <>
+        <div className="recovery">
             <div className="recTopSection">
-                <img className="backButton" src="./assets/backArrow.svg"/>
-                <img className="exitButton" src="./assets/cross.svg"/>
+                <img onClick={ back } className="backButton" src="./assets/backArrow.svg"/>
+                <img onClick={ hide } className="exitButton" src="./assets/cross.svg"/>
             </div>
             <div className="recContent">
                 <div className="recImageWrapper">
                 <img src="./assets/recImage.svg"/>
                 </div>
                 <h1 className="recHeader">Восстановление пароля</h1>
-                <p className="recPara">Мы отправим ссылку для восстановления пароля на вашу электронную почту</p>
+                <p className="recPara">Введите вашу почту для письма с подтверждением (которого ещё нет) и придумайте новый пароль</p>
                 <p className="recWarning"></p>
             </div>
             <div className="recInputs">
@@ -40,6 +50,7 @@ function Recovery(props) {
             </div>
             <div className="recSendformWrapper">
             <button onClick={handleClick} className="recSendform">Отправить</button>
+            </div>
             </div>
         </>
     );

@@ -1,9 +1,8 @@
-import { writeTokens, ACCESS_TOKEN_STORAGE_KEY } from "./JWT";
-
-const SERVER_ADDRESS = "http://localhost:8000/";
+const SERVER_ADDRESS = "http://localhost:3000/";
+let USER_ID_KEY = "USER_ID";
 
 export const registrationRequest = data => {
-    fetch(SERVER_ADDRESS, 
+    return fetch(SERVER_ADDRESS + "registration/",
         {
             method: "POST",
             body: JSON.stringify(data),
@@ -11,48 +10,47 @@ export const registrationRequest = data => {
                 'Content-Type': 'application/json;charset=utf-8'
             }
         })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
-                if(data.accessToken) writeTokens(data.accessToken, data.refreshToken);
-                alert('success');
-            })
-            .catch(e => document.getElementById('alert').classList.remove('hide'));
 };
 
 export const authorizationRequest = data => {
-    fetch(SERVER_ADDRESS + 'authorization/',
+    return( fetch(SERVER_ADDRESS  + "registration/" + "auth/",
+        {
+            method: "POST",
+            body: JSON.stringify(data),
+            headers: {
+                'Content-Type': 'application/json;charset=utf-8'
+            }
+        }))
+};
+
+export const recoveryRequest = data => {
+    return fetch(SERVER_ADDRESS  + "registration/" + data.email,
+        {
+            method: "POST",
+            body: JSON.stringify(data),
+            headers: {
+                'Content-Type': 'application/json;charset=utf-8'
+            }
+        })
+};
+
+export const getRecommendations = () => {
+    return( fetch(SERVER_ADDRESS + "cars/recommendations",
+        {
+            method: "GET",
+            headers: {
+                'Content-Type': 'application/json;charset=utf-8'
+            }
+        }))
+}
+
+export const addCarRequest = data => {
+    return( fetch(SERVER_ADDRESS + 'cars/',
     {
         method: "POST",
         body: JSON.stringify(data),
         headers: {
             'Content-Type': 'application/json;charset=utf-8'
         }
-    })
-        .then(res => res.json())
-        .then(data => {
-            console.log(data);
-            writeTokens(data.accessToken, data.refreshToken);
-            alert('success');
-        })
-        .catch(e => console.log(e));
-};
-
-export const recoveryRequest = data => {
-
-    fetch(SERVER_ADDRESS + 'recovery/',
-    {
-        method: "POST",
-        body: JSON.stringify(data),
-        headers: {
-            'Content-Type': 'application/json;charset=utf-8',
-            'Authorization': `Bearer ${localStorage.getItem(ACCESS_TOKEN_STORAGE_KEY)}`
-        }
-    })
-        .then(res => res.json())
-        .then(data => {
-            if(data.message == "ok") alert('success');
-            else alert(data.message);
-        })
-        .catch(e => console.log(e));
-};
+    }))
+}
